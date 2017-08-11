@@ -1,0 +1,32 @@
+.header {
+	height: $headerHeight;
+	background: $white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+
+	div {
+		height: 100%;
+	}
+}
+
+.header__link {
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	display: inline-block;
+	transform: translateY(-50%);
+}
+
+.header__logo {
+	height: 50px;
+	width: auto;
+}
+
+@include mq($from: $bp-tablet) {
+	.header {
+		height: 100px;
+	}
+}

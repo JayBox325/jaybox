@@ -1,0 +1,27 @@
+{
+	"sass": {
+        "src": "_assets/css/sass/styles.scss",
+        "dest": "build/public/assets/styles"
+    },
+    "njks": {
+        "src": "_assets/html/*.njk",
+	    "dest": "build"
+    },
+    "twig": {
+        "src": "build/craft/templates/**/*.twig",
+	    "dest": "build"
+    },
+    "images": {
+        "src": "_assets/images/base/*.*",
+	    "dest": "build/public/assets/images"
+    },
+    "js": {
+        "src": "_assets/js/app.js",
+	    "dest": "build/public/assets/js"
+    },
+    "svgs": {
+        "src": "_assets/images/svgs/*.svg",
+        "dest": "_assets/html/_partials",
+        "scssOutput": "_assets/css/sass/_config"
+    }
+}

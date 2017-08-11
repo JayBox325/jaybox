@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	background: $greyLight;
+	color: $black;
+	font-family: 'Open Sans', sans-serif;
+	min-height: 100vh;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.site {
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.site-wrap {
+	padding-top: $headerHeight;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: $maxWidth;
+	margin: auto;
+	padding: 0 20px;
+}
+
+
+@include mq($from: $bp-tablet) {
+	.site {
+		font-size: 17px;
+	}
+}
+
+@include mq($from: $bp-wide) {
+	.site {
+		font-size: 18px;
+	}
+}
+
+@include mq($from: $bp-super-wide) {
+	.wrapper {
+		padding: 0;
+	}
+}

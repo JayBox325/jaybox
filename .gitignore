@@ -1,0 +1,28 @@
+# OS generated files #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+# Assets #
+.sass-cache
+node_modules
+*.map
+reports
+
+build/public/assets
+
+# Craft #
+# http://buildwithcraft.com/help/craft-storage-gitignore#craft-storage-runtime
+build/craft/storage/backups/
+build/craft/storage/runtime/
+build/craft/storage/userphotos/
+
+# Caches *
+sized/
+thumbs/
+_thumbs/

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{# Meta #}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>JayBox</title>
+
+	{# Styles #}
+	<link rel="stylesheet" href="./public/assets/styles/styles.css">
+
+	{# Font #}
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+
+	<div class="site">
+		{% include "_layout/_header.njk" %} 
+
+			<div class="site-wrap">
+				<div class="wrapper">
+					{% block content %}{% endblock %}
+				</div>
+			</div>
+
+		{% include "_layout/_footer.njk" %}
+	</div>
+
+{# Jquery and app.js #}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script>
+   window.jQuery || document.write('<script src="./public/assets/js/jquery-3.2.1.min.js"><\/script>');
+</script>
+<script src="./public/assets/js/bundle.js"></script>
+
+</body>
+</html>
