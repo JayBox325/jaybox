@@ -17,14 +17,11 @@
 	<div class="site" id="barba-wrapper">
 		{% include "_layout/_header.njk" %} 
 
-			<div class="site-wrap barba-container">
-				{% block content %}{% endblock %}
-			</div>
-
-		{% include "_layout/_footer.njk" %}
+		<div class="site-wrap barba-container">
+			{% block content %}{% endblock %}
+			{% include "_layout/_footer.njk" %}
+		</div>
 	</div>
-
-	<div class="transition-sheet"></div>
 
 	{# Jquery and bundle.js #}
 	<script src="./public/assets/js/jquery-3.2.1.min.js"></script>

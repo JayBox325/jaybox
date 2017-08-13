@@ -4,3 +4,23 @@
     margin: 0;
     list-style-type: none;
 }
+
+// Backgrounds
+.u-bg-white {
+    background: $white;
+    color: $black;
+}
+
+.u-bg-black {
+    background: $black;
+    color: $white;
+}
+
+// Margins
+.u-nomarg-bottom {
+    margin-bottom: 0;
+}
+
+.u-nomarg-top {
+    margin-top: 0;
+}
