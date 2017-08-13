@@ -9,6 +9,7 @@
 
 // Base
 @import 'base/type';
+@import 'base/icons';
 
 // Layout
 @import 'layout/structure';
@@ -21,16 +22,3 @@
 
 // Utils
 @import 'utils/index';
-
-
-.transition-sheet {
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 200;
-    background: red;
-    transition: transform 300ms ease-in-out;
-    transform: translateY(100%);
-}
