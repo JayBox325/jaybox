@@ -16,6 +16,9 @@
     },
     "js": {
         "src": "_assets/js/app.js",
+	    "libs": {
+            "jquery": "_assets/js/jquery-3.2.1.min.js"
+        },
 	    "dest": "build/public/assets/js"
     },
     "svgs": {

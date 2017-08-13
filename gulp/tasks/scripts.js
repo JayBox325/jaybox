@@ -35,6 +35,12 @@ gulp.task('scripts-watch', ['js'], function (done) {
 })
 
 
+// Move other script files such as jQuery
+gulp.task('move-scripts', function() {
+	return gulp.src(paths.js.libs.jquery)
+        .pipe(gulp.dest(paths.js.dest))
+})
+
 
 
 
