@@ -15,6 +15,7 @@ node_modules
 reports
 
 build/public/assets
+build/*.html
 
 # Craft #
 # http://buildwithcraft.com/help/craft-storage-gitignore#craft-storage-runtime

@@ -13,13 +13,13 @@ import paths from '../path.config'
 
 // Process Nunjucks files and output
 gulp.task('nunjucks', function() {
-	return gulp.src(paths.html.src)
+	return gulp.src(paths.njks.src)
 		.pipe(nunjucksRender({
 			path: '_assets/html',
 			ext: '.html'
 		}))
 		.pipe(production(htmlmin({collapseWhitespace: true})))
-		.pipe(gulp.dest(paths.html.dest))
+		.pipe(gulp.dest(paths.njks.dest))
 })
 
 gulp.task('nunjucks-watch', ['nunjucks'], function (done) {
