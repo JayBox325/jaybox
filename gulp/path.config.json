@@ -8,8 +8,7 @@
 	    "dest": "build"
     },
     "twig": {
-        "src": "build/craft/templates/**/*.twig",
-	    "dest": "build"
+        "src": "build/craft/templates/**/*.twig"
     },
     "images": {
         "src": "_assets/images/base/*.*",
