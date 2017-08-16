@@ -4,6 +4,9 @@
 @import '_config/svg-symbols';
 @import '_config/variables';
 
+// Helpers
+@import '_helpers/helpers';
+
 // Grid
 @import 'grid/index';
 
@@ -15,6 +18,7 @@
 @import 'layout/structure';
 @import 'layout/header';
 @import 'layout/section';
+@import 'layout/footer';
 @import 'layout/menu';
 
 // Modules

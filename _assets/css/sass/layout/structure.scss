@@ -4,22 +4,33 @@
 	box-sizing: border-box;
 }
 
+
 body {
-	background: $greyLight;
+	background: $black;
 	color: $black;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', helvetica, arial, sans-serif;
 	min-height: 100vh;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	&.menu-is-active {
+		overflow: hidden;
+	}
 }
 
 .site {
 	font-size: 16px;
 	line-height: 1.6;
+	background: $greyLight;
+	min-height: 100vh;
 }
 
 .site-wrap {
-	padding-top: $headerHeight;
+	padding-top: $headerHeightMob;
+	position: relative;
+	&.has-hero {
+		padding-top: 0;
+	}
 }
 
 .wrapper {
@@ -34,6 +45,15 @@ body {
 	.site {
 		font-size: 17px;
 	}
+	.wrapper {
+		padding: 0 40px;
+	}
+}
+
+@include mq($from: $bp-desktop) {
+	.site-wrap {
+		padding-top: $headerHeightDesk;
+	}
 }
 
 @include mq($from: $bp-wide) {
@@ -43,6 +63,12 @@ body {
 }
 
 @include mq($from: $bp-super-wide) {
+	.site-wrap {
+		padding-top: $headerHeightWide;
+	}
+}
+
+@include mq($from: $bp-widest) {
 	.wrapper {
 		padding: 0;
 	}

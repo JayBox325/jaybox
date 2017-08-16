@@ -16,8 +16,9 @@ a:hover {
 // Headings
 .heading-1,
 h1 {
-    font-size: 250%;
-    font-weight: 500;
+    font-size: 140%;
+    line-height: 1.3;
+    font-weight: 700;
 }
 
 .heading-2,
@@ -28,14 +29,16 @@ h2 {
 
 .heading-3,
 h3 {
-    font-size: 200%;
-	font-weight: 500;
+    font-size: 110%;
+    font-weight: 500;
+    line-height: 1.2
 }
 
 .heading-4,
 h4 {
-    font-size: 180%;
-	font-weight: 500;
+    font-size: 140%;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 .heading-5,
@@ -60,9 +63,35 @@ p {
     &:last-child {
         margin-bottom: 0;
     }
+
+    a {
+        border-bottom: 1px solid;
+        transition: color 200ms ease-in-out;
+        &:hover {
+            color: blue;
+        }
+    }
 }
 
 a {
 	text-decoration: none;
 	color: inherit;
+}
+
+@include mq($from: $bp-sm-tablet) {
+    .heading-1,
+    h1 {
+        font-size: 180%;
+    }
+    .heading-4,
+    h4 {
+        font-size: 150%;
+    }
+}
+
+@include mq($from: $bp-tablet) {
+    .heading-4,
+    h4 {
+        font-size: 160%;
+    }
 }

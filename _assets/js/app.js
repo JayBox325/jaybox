@@ -1,4 +1,4 @@
 window.require = require
 
-import test from './modules/test'
+import menu from './modules/menu'
 import pageTransitions from './modules/pageTransitions'

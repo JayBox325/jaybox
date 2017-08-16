@@ -5,3 +5,33 @@
 .section--first {
     margin-top: 40px;
 }
+
+@include mq($from: $bp-tablet) {
+    .section {
+        margin-bottom: 60px;
+    }
+    
+    .section--first {
+        margin-top: 60px;
+    }
+}
+
+@include mq($from: $bp-desktop) {
+    .section {
+        margin-bottom: 80px;
+    }
+    
+    .section--first {
+        margin-top: 80px;
+    }
+}
+
+@include mq($from: $bp-wide) {
+    .section {
+        margin-bottom: 100px;
+    }
+    
+    .section--first {
+        margin-top: 100px;
+    }
+}
