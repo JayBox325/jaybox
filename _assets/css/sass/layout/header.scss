@@ -23,6 +23,13 @@
 .header__logo {
 	height: 50px;
 	width: auto;
+	transition: color 400ms ease-in-out;
+	&:hover {
+		color: $black;
+	}
+	svg {
+		pointer-events: none
+	}
 }
 
 @include mq($from: $bp-tablet) {

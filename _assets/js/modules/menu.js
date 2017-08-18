@@ -7,25 +7,25 @@ activeMenuClass = 'menu-is-active'
 
 // Hamburger click event
 $hamburger.click(function() {
-if ($body.hasClass(activeMenuClass)) {
-  $body.removeClass(activeMenuClass)
-} else {
-  $body.addClass(activeMenuClass)
-}
+    if ($body.hasClass(activeMenuClass)) {
+        $body.removeClass(activeMenuClass)
+    } else {
+        $body.addClass(activeMenuClass)
+    }
 })
 
 // Link click event
 $menuLink.click(function() {
-$body.removeClass(activeMenuClass)
-$checkbox.prop('checked', false)
+    $body.removeClass(activeMenuClass)
+    $checkbox.prop('checked', false)
 })
 
 // Mask click event
 $mask.click(function() {
-if ($body.hasClass(activeMenuClass)) {
-  $body.removeClass(activeMenuClass)
-  $checkbox.prop('checked', false)
-} else {
-  $body.addClass(activeMenuClass)
-}
+    if ($body.hasClass(activeMenuClass)) {
+        $body.removeClass(activeMenuClass)
+        $checkbox.prop('checked', false)
+    } else {
+        $body.addClass(activeMenuClass)
+    }
 })
