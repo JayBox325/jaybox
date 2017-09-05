@@ -8,7 +8,7 @@ import htmlmin from 'gulp-htmlmin'
 import nunjucksRender from 'gulp-nunjucks-render'
 
 // Config
-import {development, production} from '../config'
+import {development, production, cms} from '../config'
 import paths from '../path.config'
 
 // Process Nunjucks files and output
@@ -19,7 +19,8 @@ gulp.task('nunjucks', function() {
 			ext: '.html'
 		}))
 		.pipe(production(htmlmin({collapseWhitespace: true})))
-		.pipe(gulp.dest(paths.njks.dest))
+		.pipe(development(gulp.dest(paths.njks.dest)))
+		.pipe(cms(gulp.dest(paths.njks.cmsDest)))
 })
 
 gulp.task('nunjucks-watch', ['nunjucks'], function (done) {

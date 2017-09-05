@@ -5,6 +5,7 @@
     },
     "njks": {
         "src": "_assets/html/*.njk",
+        "cmsDest": "_assets/html/dist",
 	    "dest": "build"
     },
     "twig": {
@@ -24,6 +25,11 @@
     "svgs": {
         "src": "_assets/images/svgs/*.svg",
         "dest": "_assets/html/_partials",
+        "cmsDest": "build/craft/templates/includes",
         "scssOutput": "_assets/css/sass/_config"
+    },
+    "fonts": {
+        "src": "_assets/fonts/*.*",
+        "dest": "build/public/assets/fonts"
     }
 }

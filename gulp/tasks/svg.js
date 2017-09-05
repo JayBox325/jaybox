@@ -3,7 +3,7 @@ import browserSync from 'browser-sync'
 import environments from 'gulp-environments'
 
 // Config
-import {development, production} from '../config'
+import {development, production, cms} from '../config'
 import paths from '../path.config'
 
 // SVG Symbols dependencies
@@ -24,11 +24,23 @@ gulp.task('symbols', function () {
 		.pipe(gulpif( /[.]svg$/, rename(function (path) {
 			path.basename = 'svg-symbols'
 		})))
+		.pipe(development(gulpif( /[.]svg$/, rename(function (path) {
+			path.basename = 'svg-symbols'
+		}))))
+		.pipe(development(gulpif( /[.]svg$/, rename(function (path) {
+			path.basename = 'svg-symbols'
+		}))))
+		.pipe(cms(gulpif( /[.]svg$/, rename(function (path) {
+			path.basename = 'svg-symbols',
+			path.extname = '.twig'
+		}))))
 		.pipe(gulpif( /[.]css$/, rename(function (path) {
 			path.basename = 'svg-symbols',
 			path.extname = '.scss'
 		})))
-		.pipe(gulpif( /[.]svg$/, gulp.dest(paths.svgs.dest)))
+		.pipe(development(gulpif( /[.]svg$/, gulp.dest(paths.svgs.dest))))
+		.pipe(production(gulpif( /[.]svg$/, gulp.dest(paths.svgs.dest))))
+		.pipe(cms(gulpif( /[.]twig$/, gulp.dest(paths.svgs.cmsDest))))
 		.pipe(gulpif( /[.]scss$/, gulp.dest(paths.svgs.scssOutput)))
 		.pipe(browserSync.reload({ stream: true }));
 })

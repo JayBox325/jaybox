@@ -12,6 +12,7 @@
   },
   "scripts": {
     "start": "gulp --env development",
+    "cms": "gulp cms --env cms",
     "build-dev": "gulp build --env development",
     "build-prod": "gulp build --env production",
     "build-cms": "gulp build-cms --env production"

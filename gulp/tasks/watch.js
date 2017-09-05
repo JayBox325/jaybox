@@ -1,7 +1,6 @@
 import gulp from 'gulp'
 import path from 'path'
 import watch from 'gulp-watch'
-import util from 'gulp-util'
 
 gulp.task('watch', function() {
 	gulp.watch('_assets/css/**/*.scss', ['styles'])
