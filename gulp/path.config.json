@@ -30,7 +30,7 @@
         "src": "_assets/images/svgs/*.svg",
         "dest": "_assets/html/_partials",
         "cmsDest": "build/craft/templates/includes",
-        "scssOutput": "_assets/css/sass/_config",
+        "scssOutput": "_assets/css/sass/_config"
     },
     "fonts": {
         "src": "_assets/fonts/*.*",
