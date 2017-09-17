@@ -4,6 +4,13 @@
 }
 
 // @include gradient($black, transparent);
-@mixin gradient($startCol, $endCol) {
-    background: linear-gradient(to bottom, $endCol 0%, $startCol 100%);
+@mixin gradient($angle, $startCol, $endCol) {
+    background: linear-gradient($angle, $endCol 0%, $startCol 100%);
 }
+
+/*
+    Angle options:
+    - to bottom
+    - 45deg
+    - 135deg
+*/
