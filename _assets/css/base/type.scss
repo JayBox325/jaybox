@@ -1,3 +1,14 @@
+html.wf-active {
+    .site {
+        opacity: 1;
+    }
+}
+
+.site {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
 html {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;

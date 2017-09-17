@@ -54,6 +54,7 @@
     "require-new": "^1.1.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
+    "webfontloader": "^1.6.28",
     "webpack": "^3.4.1"
   }
 }
