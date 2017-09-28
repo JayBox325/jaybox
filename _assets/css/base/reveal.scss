@@ -1,0 +1,42 @@
+.js-reveal-slide {
+    clip-path: inset(0 100% 0 0);
+    will-change: clip-path;
+    transform: translateX(-20px);
+
+    &.is-in-view {
+        clip-path: inset(0% 0% 0% 0%);
+        transform: translateX(0px);
+    }
+}
+
+.js-reveal-slide--1 {
+    transition: transform 600ms ease-in-out 0ms, clip-path 600ms ease-in-out 0ms;
+}
+
+.js-reveal-slide--2 {
+    transition: transform 600ms ease-in-out 100ms, clip-path 600ms ease-in-out 100ms;
+}
+
+.js-reveal-slide--3 {
+    transition: transform 600ms ease-in-out 200ms, clip-path 600ms ease-in-out 200ms;
+}
+
+.js-reveal-slide--4 {
+    transition: transform 600ms ease-in-out 300ms, clip-path 600ms ease-in-out 300ms;
+}
+
+.js-reveal--1 {
+    @include fadeReveal(100ms, 0ms);
+}
+
+.js-reveal--2 {
+    @include fadeReveal(200ms, 100ms);
+}
+
+.js-reveal--3 {
+    @include fadeReveal(300ms, 200ms);
+}
+
+.js-reveal--4 {
+    @include fadeReveal(400ms, 300ms);
+}
