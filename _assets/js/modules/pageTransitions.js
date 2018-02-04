@@ -1,5 +1,8 @@
 import Barba from 'barba.js'
 
+// Modules
+import scrollFunction from './skrollr.js'
+
 var FadeTransition = Barba.BaseTransition.extend({
     start: function() {
       /**
@@ -64,8 +67,13 @@ var FadeTransition = Barba.BaseTransition.extend({
   };
 
 Barba.Pjax.getTransition = function() {
-    return FadeTransition;
-};
+    return FadeTransition
+}
+
+Barba.Dispatcher.on('transitionCompleted', function(container) {
+  scrollFunction.scroller()
+  stickyHeader.sticky()
+})
   
 Barba.Prefetch.init()
 Barba.Pjax.start()

@@ -1,7 +1,7 @@
 import WebFont from 'webfontloader'
 
- WebFont.load({
+WebFont.load({
     google: {
-        families: ['Open Sans']
+        families: ['Abril Fatface']
     }
 })

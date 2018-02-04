@@ -27,9 +27,6 @@ gulp.task('symbols', function () {
 		.pipe(development(gulpif( /[.]svg$/, rename(function (path) {
 			path.basename = 'svg-symbols'
 		}))))
-		.pipe(development(gulpif( /[.]svg$/, rename(function (path) {
-			path.basename = 'svg-symbols'
-		}))))
 		.pipe(cms(gulpif( /[.]svg$/, rename(function (path) {
 			path.basename = 'svg-symbols',
 			path.extname = '.twig'

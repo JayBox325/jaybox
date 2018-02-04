@@ -8,18 +8,15 @@
 
 	{# Styles #}
 	<link rel="stylesheet" href="./public/assets/styles/styles.css">
-
-	{# Font #}
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
 
 	<div class="site" id="barba-wrapper">
-		{% include "_layout/_header.njk" %} 
+		{% include "./header.njk" %}
 
 		<div class="site-wrap barba-container">
 			{% block content %}{% endblock %}
-			{% include "_layout/_footer.njk" %}
+			{% include "./footer.njk" %}
 		</div>
 	</div>
 

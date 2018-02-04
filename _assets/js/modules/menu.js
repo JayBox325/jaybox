@@ -29,3 +29,22 @@ $mask.click(function() {
         $body.addClass(activeMenuClass)
     }
 })
+
+
+function sticky() {
+
+    const $header = $('.header')
+    const $window = $(window)
+    const stickyClass = 'is-sticky'
+    const top = $header.offset().top + 1
+
+    $window.scroll(function() {
+        if ($window.scrollTop() >= top) {
+            $header.addClass(stickyClass)
+        } else {
+            $header.removeClass(stickyClass)
+        }
+    })
+}
+
+export default { sticky }
