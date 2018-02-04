@@ -1,0 +1,17 @@
+.footer {
+    background: $white;
+    padding: 60px 0;
+}
+
+
+@include mq($from: $bp-sm-tablet) {
+    .footer {
+        padding: 80px 0;
+    }
+}
+
+@include mq($from: $bp-tablet) {
+    .footer {
+        padding: 100px 0;
+    }
+}

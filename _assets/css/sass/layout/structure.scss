@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+	background: $black;
+	color: $black;
+	font-family: 'Times New Roman', 'Times New Roman', Times, serif;
+	min-height: 100vh;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	&.menu-is-active {
+		overflow: hidden;
+	}
+}
+
+.site {
+	font-size: 16px;
+	line-height: 1.6;
+	background: $greyLight;
+	min-height: 100vh;
+	overflow: hidden;
+	z-index: 2;
+	position: relative;
+}
+
+.site-wrap {
+	position: relative;
+	&.has-hero {
+		padding-top: 0;
+	}
+}
+
+.wrapper {
+	width: 100%;
+	max-width: $maxWidth;
+	margin: auto;
+	padding: 0 20px;
+}
+
+.wrapper--content {
+	max-width: 980px;
+}
+
+.wrapper--thin {
+    max-width: 400px;
+}
+
+.wrapper--mid {
+	max-width: 1100px;
+}
+
+@include mq($from: $bp-lg-mobile) {
+	.wrapper {
+		padding: 0 40px;
+	}
+}
+
+@include mq($from: $bp-sm-tablet) {
+	.wrapper--thin {
+		max-width: 500px;
+	}
+}
+
+@include mq($from: $bp-tablet) {
+	.site {
+		font-size: 17px;
+	}
+	.wrapper {
+		padding: 0 60px;
+	}
+	.wrapper--thin {
+		max-width: 650px;
+	}
+}
+
+@include mq($from: $bp-desktop) {
+	.wrapper--thin {
+		max-width: 900px;
+	}
+}
+
+@include mq($from: $bp-wide) {
+	.site {
+		font-size: 18px;
+	}
+}
+
+@include mq($from: $bp-widest) {
+	.wrapper {
+		padding: 0;
+	}
+}

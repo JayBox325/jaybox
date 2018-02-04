@@ -14,7 +14,6 @@ node_modules
 *.map
 reports
 
-build/public/assets
 build/*.html
 
 # Craft #
@@ -22,6 +21,7 @@ build/*.html
 build/craft/storage/backups/
 build/craft/storage/runtime/
 build/craft/storage/userphotos/
+build/public/resources/
 
 # Caches *
 sized/

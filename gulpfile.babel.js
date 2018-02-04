@@ -7,6 +7,7 @@ requireDir('./gulp/tasks', {recurse: true})
 gulp.task('default', [
 	'styles',
 	'move-scripts',
+	'move-favicons',
 	'move-fonts',
 	'images',
 	'symbols',
@@ -20,19 +21,21 @@ gulp.task('cms', [
 	'styles',
 	'move-scripts',
 	'move-fonts',
+	'move-favicons',
 	'images',
 	'symbols',
 	'nunjucks',
 	'twig',
 	'js',
 	'serve',
-	'watch'
+	'watch-cms'
 ]);
 
 gulp.task('build', [
 	'styles',
 	'move-scripts',
 	'move-fonts',
+	'move-favicons',
 	'images',
 	'symbols',
 	'nunjucks',
@@ -42,6 +45,7 @@ gulp.task('build', [
 gulp.task('build-cms', [
 	'styles',
 	'move-scripts',
+	'move-favicons',
 	'move-fonts',
 	'images',
 	'symbols',

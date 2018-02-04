@@ -1,36 +1,37 @@
 {
 	"sass": {
-        "src": "_assets/css/styles.scss",
-        "dest": "build/public/assets/styles",
-        "watch": "_assets/css/**/*.scss"
+        "src": "_assets/css/sass/*.scss",
+        "dest": "build/public/assets/styles"
     },
     "njks": {
         "src": "_assets/html/*.njk",
         "cmsDest": "_assets/html/dist",
-        "dest": "build",
-        "watch": "_assets/html/**/*.njk"
+	    "dest": "build"
     },
     "twig": {
-        "src": "build/craft/templates/**/*.twig"
+        "src": "build/craft/templates/**/*.twig",
+        "dest": "build/craft/templates/"
     },
     "images": {
         "src": "_assets/images/base/*.*",
-        "dest": "build/public/assets/images",
-        "watch": "_assets/images/base/*.*"
+	    "dest": "build/public/assets/images"
+    },
+    "favicons": {
+        "src": "_assets/images/favicons/*.*",
+	    "dest": "build/public/assets/images/favicons"
     },
     "js": {
         "src": "_assets/js/app.js",
 	    "libs": {
             "jquery": "_assets/js/jquery-3.2.1.min.js"
         },
-        "dest": "build/public/assets/js",
-        "watch": "_assets/js/**/*.js"
+	    "dest": "build/public/assets/js"
     },
     "svgs": {
         "src": "_assets/images/svgs/*.svg",
         "dest": "_assets/html/_partials",
         "cmsDest": "build/craft/templates/includes",
-        "scssOutput": "_assets/css/_config"
+        "scssOutput": "_assets/css/sass/_config"
     },
     "fonts": {
         "src": "_assets/fonts/*.*",

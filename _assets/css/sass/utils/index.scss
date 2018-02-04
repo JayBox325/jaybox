@@ -1,0 +1,51 @@
+// Resets
+.r-ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.u-rel {
+    position: relative;
+}
+
+.u-center {
+    text-align: center;
+}
+
+
+// Backgrounds
+.u-bg-white {
+    background: $white;
+    color: $black;
+}
+
+.u-bg-black {
+    background: $black;
+    color: $white;
+}
+
+.u-bg-grey {
+    background: $greyLight;
+    color: $black;
+}
+
+
+// Colours
+
+.u-black {
+    color: $black;
+}
+
+.u-white {
+    color: $white;
+}
+
+// Margins
+.u-nomarg-bottom {
+    margin-bottom: 0;
+}
+
+.u-nomarg-top {
+    margin-top: 0;
+}

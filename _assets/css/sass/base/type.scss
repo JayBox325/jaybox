@@ -1,0 +1,125 @@
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+    line-height: 1.3;
+    font-family: $montserrat;
+}
+
+a:active,
+a:hover {
+	outline-width: 0;
+}
+
+i {
+    font-style: italic;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+
+// Headings
+.heading-1,
+h1 {
+    font-size: 30px;
+    line-height: 1.3;
+}
+
+.heading-2,
+h2 {
+    font-size: 26px;
+    line-height:1.3;
+}
+
+.heading-3,
+h3 {
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.heading-4,
+h4 {
+    font-size: 70px;
+    line-height: .6;
+}
+
+.heading-5,
+h5 {
+    font-size: 160%;
+}
+
+.heading-6,
+h6 {
+    font-size: 120%;
+}
+
+
+
+
+
+// Base
+p {
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    a {
+        border-bottom: 1px solid;
+        transition: color 200ms ease-in-out;
+        color: inherit;
+    }
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+    transition: color .3s ease-in-out;
+}
+
+@include mq($from: $bp-sm-tablet) {
+    .heading-1,
+    h1 {
+        font-size: 35px;
+    }
+    .heading-2,
+    h2 {
+        font-size: 32px;
+    }
+    .heading-3,
+    h3 {
+        font-size: 28px;
+    }
+}
+
+@include mq($from: $bp-tablet) {
+    .heading-1,
+    h1 {
+        font-size: 40px;
+    }
+    .heading-2,
+    h2 {
+        font-size: 36px;
+    }
+    .heading-3,
+    h3 {
+        font-size: 30px;
+    }
+}
+
+@include mq($from: $bp-desktop) {
+    .heading-1,
+    h1 {
+        font-size: 60px;
+    }
+    .heading-2,
+    h2 {
+        font-size: 44px;
+    }
+    .heading-3,
+    h3 {
+        font-size: 32px;
+    }
+}

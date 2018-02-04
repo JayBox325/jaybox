@@ -1,0 +1,32 @@
+// Colours
+$white:						#ffffff;
+$black:						#272727;
+
+$greyLight:                 #ECECEC;
+$greyMed:                   darken(#ECECEC,10%);
+$orangeLight:               #F76342;
+$orangeDark:                #C4482C;
+
+$facebookLight:             #3b5998;
+$facebookDark:              darken($facebookLight, 5%);
+$twitterLight:              #1da1f2;
+$twitterDark:               darken($twitterLight, 5%);
+
+// Fonts
+$montserrat:                'Montserrat', 'Futura', 'Helvetica', sans-serif;
+
+// Misc
+$headerHeightMob:           65px;
+$headerHeightDesk:          80px;
+$headerHeightWide:          120px;
+$maxWidth:                  1400px;
+
+// Breakpoints
+$bp-mobile:					320px;
+$bp-lg-mobile:				410px;
+$bp-sm-tablet:				660px;
+$bp-tablet:					768px;
+$bp-desktop:				980px;
+$bp-wide:					1100px;
+$bp-super-wide:				1400px;
+$bp-widest:                 1600px;

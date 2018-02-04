@@ -10,6 +10,7 @@ import browserify from 'browserify'
 import source from 'vinyl-source-stream'
 import sourcemaps from 'gulp-sourcemaps'
 import buffer from 'vinyl-buffer'
+import gzip from 'gulp-gzip'
 
 // Config
 import {development, production} from '../config'
@@ -22,6 +23,7 @@ gulp.task('js', function () {
         .on('error', util.log)
         .bundle()
         .pipe(source('bundle.js'))
+        .on('error', util.log)
 		.pipe(buffer())
         .pipe(development(sourcemaps.init({loadMaps: true})))
         .pipe(development(sourcemaps.write()))
@@ -36,8 +38,13 @@ gulp.task('scripts-watch', ['js'], function (done) {
 	done()
 })
 
+
 // Move other script files such as jQuery
 gulp.task('move-scripts', function() {
 	return gulp.src(paths.js.libs.jquery)
         .pipe(gulp.dest(paths.js.dest))
 })
+
+
+
+

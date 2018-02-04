@@ -32,5 +32,11 @@ gulp.task('nunjucks-watch', ['nunjucks'], function (done) {
 // Process Twig files
 gulp.task('twig', function() {
 	return gulp.src(paths.twig.src)
-		.pipe(browserSync.stream())
+		.pipe(production(htmlmin({collapseWhitespace: true})))
+		.pipe(cms(gulp.dest(paths.twig.dest)))
 })
+
+gulp.task('twig-watch', ['twig'], function (done) {
+    browserSync.reload();
+    done();
+});

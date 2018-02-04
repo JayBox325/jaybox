@@ -1,0 +1,21 @@
+.button {
+    appearance: none;  
+    border: none;
+    background: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    display: inline-block;
+    position: relative;
+    transition: color .3s ease-in-out;
+    span {
+        position: relative;
+        z-index: 2;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}

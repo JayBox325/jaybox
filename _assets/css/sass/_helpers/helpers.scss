@@ -1,0 +1,9 @@
+// @include box-shadow(0, 0, 0, 2px, $black, inset);
+@mixin box-shadow($horz, $vert, $blur, $spread, $color, $inset) {
+    box-shadow: $inset $horz $vert $blur $spread $color;
+}
+
+// @include gradient($black, transparent);
+@mixin gradient($startCol, $endCol) {
+    background: linear-gradient(45deg, $startCol 0%, $endCol 100%);
+}

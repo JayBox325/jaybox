@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{# Meta #}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>JayBox</title>
+
+	{# Styles #}
+	<link rel="stylesheet" href="./public/assets/styles/styles.css">
+</head>
+<body>
+
+	<span class="loading">
+		<span class="loading__bar"></span>
+	</span>
+
+	<div class="site" id="barba-wrapper">
+
+		<div class="site-wrap{% block bodyClass %}{% endblock %} barba-container">
+			{% include "_layout/_header.njk" %}
+			{% block content %}{% endblock %}
+			{% include "_layout/_footer.njk" %}
+		</div>
+	</div>
+
+	{# Jquery and bundle.js #}
+	<script src="./public/assets/js/jquery-3.2.1.min.js"></script>
+	<script src="./public/assets/js/bundle.js"></script>
+
+</body>
+</html>

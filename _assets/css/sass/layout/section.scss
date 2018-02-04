@@ -1,0 +1,48 @@
+.section {
+    position: relative;
+    overflow: hidden;
+}
+
+.section--nobg {
+    padding: 0;
+}
+
+.section--bg {
+    padding: 60px 0;
+}
+
+.section--min-height {
+    min-height: 100vh;
+    display: flex;
+}
+
+@include mq($from: $bp-sm-tablet) {
+    .section--bg {
+        padding: 80px 0;
+    }
+}
+
+
+@include mq($from: $bp-tablet) {
+    .section--bg {
+        padding: 100px 0;
+    }
+}
+
+@include mq($from: $bp-desktop) {
+    .section--bg {
+        padding: 140px 0;
+    }
+}
+
+@include mq($from: $bp-wide) {
+    .section--bg {
+        padding: 200px 0;
+    }
+}
+
+@include mq($from: $bp-widest) {
+    .section--bg {
+        padding: 220px 0;
+    }
+}

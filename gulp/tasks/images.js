@@ -26,3 +26,12 @@ gulp.task('move-videos', function() {
 	return gulp.src(paths.images.videos)
         .pipe(gulp.dest(paths.images.dest))
 })
+
+// Move favicons
+gulp.task('move-favicons', function() {
+	return gulp.src(paths.favicons.src)
+        .pipe(gulp.dest(paths.favicons.dest))
+})
+
+
+
