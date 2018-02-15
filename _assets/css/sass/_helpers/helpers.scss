@@ -1,6 +1,10 @@
 // @include box-shadow(0, 0, 0, 2px, $black, inset);
-@mixin box-shadow($horz, $vert, $blur, $spread, $color, $inset) {
-    box-shadow: $inset $horz $vert $blur $spread $color;
+@mixin box-shadow($horz, $vert, $blur, $spread, $color, $inset: false) {
+    @if $inset == true {
+        box-shadow: inset $horz $vert $blur $spread $color;
+    } @else {
+        box-shadow: $horz $vert $blur $spread $color;
+    }
 }
 
 // @include gradient($black, transparent);
