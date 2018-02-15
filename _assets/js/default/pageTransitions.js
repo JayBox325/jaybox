@@ -1,7 +1,7 @@
 import Barba from 'barba.js'
-import revealFunction from './scrollReveal.js'
 import smoothScroll from './smoothScrolling.js'
 import socialWindow from './social.js'
+import skrollr from './parallax.js'
 
 var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
@@ -40,9 +40,9 @@ var FadeTransition = Barba.BaseTransition.extend({
 })
 
 Barba.Dispatcher.on('transitionCompleted', function(container) {
-  //revealFunction.reveal()
   socialWindow.social()
   smoothScroll.scroll()
+  skrollr.parallax()
 })
 
 Barba.Pjax.getTransition = function() {

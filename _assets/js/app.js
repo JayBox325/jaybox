@@ -1,7 +1,7 @@
 window.require = require
 
-import menu from './modules/menu'
-import form from './modules/form'
-import pageTransitions from './modules/pageTransitions'
-import webfontLoader from './modules/webfont-loader'
-import parallax from './modules/parallax'
+import menu from './default/menu'
+import form from './default/form'
+import pageTransitions from './default/pageTransitions'
+import webfontLoader from './default/webfont-loader'
+import parallax from './default/parallax'
