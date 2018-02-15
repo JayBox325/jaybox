@@ -1,21 +1,30 @@
-// import { TweenLite, Elastic, CSSPlugin, TimelineLite } from "gsap"
+import skrollr from 'skrollr'
 
-// // Elements
-// const $vertical = $('.js-p-vertical')
+function parallax() {
 
-// // Timeline
-// const tl = new TimelineLite({paused:true})
+    // Setup Skrollr
+    function skrollrInit() {
+        const s = skrollr.init({
+            render: function(data) {
+                // Log the current scroll position
+                //console.log(data.curTop);
+            }
+        })
+    }
 
-// $vertical.each(function(i, box){
-//     var $element = $(box);
-//     TweenLite.staggerTo($element, 0.3, {css:{ y:500 }, ease:Back.easeOut})
-// })
+    // Initiate Skrollr if on large device
+    if ($(window).width() > 767) {
+        skrollrInit()
+    }
 
-// $(window).scroll(function(e){
-//     const scrollTop = $(window).scrollTop()
-//     const docHeight = $(document).height()
-//     const winHeight = $(window).height()
-//     const scrollPercent = (scrollTop) / (docHeight - winHeight)
+    // Destroy Skrollr if on small device
+    $(window).on('resize', function () {
+        if ($(window).width() <= 767) {
+            skrollr.init().destroy()
+        } else {
+            skrollrInit()
+        }
+    })
+}
 
-//     tl.progress( scrollPercent ).pause()
-// })
+export default { parallax }
