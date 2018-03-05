@@ -34,7 +34,7 @@
     },
     "svgs": {
         "src": "_assets/images/svgs/*.svg",
-        "dest": "_assets/html/_partials",
+        "dest": "_assets/html/_layout",
         "cmsDest": "build/craft/templates/includes",
         "scssOutput": "_assets/css/sass/_config",
         "watch": "_assets/images/svgs/*.svg"

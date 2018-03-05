@@ -23,11 +23,13 @@ gulp.task('symbols', function () {
 		.pipe(gulpif( /[.]svg$/, rename(function (path) {
 			path.basename = 'svg-symbols'
 		})))
-		.pipe(development(gulpif( /[.]svg$/, rename(function (path) {
-			path.basename = 'svg-symbols'
+		.pipe(production(gulpif( /[.]svg$/, rename(function (path) {
+			path.basename = 'svg-symbols',
+			path.extname = '.njk'
 		}))))
 		.pipe(development(gulpif( /[.]svg$/, rename(function (path) {
-			path.basename = 'svg-symbols'
+			path.basename = 'svg-symbols',
+			path.extname = '.njk'
 		}))))
 		.pipe(cms(gulpif( /[.]svg$/, rename(function (path) {
 			path.basename = 'svg-symbols',
@@ -37,8 +39,8 @@ gulp.task('symbols', function () {
 			path.basename = 'svg-symbols',
 			path.extname = '.scss'
 		})))
-		.pipe(development(gulpif( /[.]svg$/, gulp.dest(paths.svgs.dest))))
-		.pipe(production(gulpif( /[.]svg$/, gulp.dest(paths.svgs.dest))))
+		.pipe(development(gulpif( /[.]njk$/, gulp.dest(paths.svgs.dest))))
+		.pipe(production(gulpif( /[.]njk$/, gulp.dest(paths.svgs.dest))))
 		.pipe(cms(gulpif( /[.]twig$/, gulp.dest(paths.svgs.cmsDest))))
 		.pipe(gulpif( /[.]scss$/, gulp.dest(paths.svgs.scssOutput)))
 		.pipe(browserSync.reload({ stream: true }));

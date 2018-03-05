@@ -17,22 +17,19 @@
 	<!--[if lt IE 9]><p class='ie-browsehappy'>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different
 browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
-	<span class="loading">
-		<span class="loading__bar"></span>
-	</span>
-
 	<div class="site" id="barba-wrapper">
-
-		<div class="site-wrap{% block bodyClass %}{% endblock %} barba-container">
-			{% include "_layout/_header.njk" %}
+		{% include "_layout/header.njk" %}
+		<div class="site-wrap barba-container{% block bodyClass %}{% endblock %}">
 			{% block content %}{% endblock %}
-			{% include "_layout/_footer.njk" %}
+			{% include "_layout/footer.njk" %}
 		</div>
 	</div>
 
 	{# Jquery and bundle.js #}
 	<script src="./public/assets/js/jquery-3.2.1.min.js"></script>
 	<script src="./public/assets/js/bundle.js"></script>
+
+	{# {% include "_layout/svg-symbols.njk" %} #}
 
 </body>
 </html>

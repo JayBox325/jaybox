@@ -33,11 +33,11 @@ gulp.task('cms', [
 
 gulp.task('build', [
 	'styles',
+	'symbols',
 	'move-scripts',
 	'move-fonts',
 	'move-favicons',
 	'images',
-	'symbols',
 	'nunjucks',
 	'js'
 ]);
