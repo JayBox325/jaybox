@@ -14,7 +14,7 @@ node_modules
 *.map
 reports
 
-build/*.html
+build
 
 # Craft #
 # http://buildwithcraft.com/help/craft-storage-gitignore#craft-storage-runtime

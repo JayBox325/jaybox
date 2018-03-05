@@ -1,0 +1,25 @@
+// IE 11
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) { 
+
+}
+
+// IE 9
+.ie9 {
+
+}
+
+// IE 8 and below
+.ie {
+    .ie-browsehappy {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+
+        background: $white;
+        border-top: 1px solid $greyLight;
+        padding: 40px;
+        line-height: 1.3;
+    }
+}
