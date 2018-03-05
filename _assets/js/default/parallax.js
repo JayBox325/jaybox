@@ -1,7 +1,7 @@
 import skrollr from 'skrollr'
+import inView from 'in-view'
 
-function parallax() {
-
+function skrollr() {
     // Setup Skrollr
     function skrollrInit() {
         const s = skrollr.init({
@@ -27,4 +27,24 @@ function parallax() {
     })
 }
 
-export default { parallax }
+function reveal() {
+    const inViewClass = 'is-in-view'
+
+    // Offset
+    inView.offset(40);
+    
+    inView('.fade-in')
+        .on('enter', el => {
+            $(el).css({
+                opacity: '1'
+            })
+        })
+
+    
+    inView('.slide-in')
+        .on('enter', el => {
+            $(el).addClass(inViewClass)
+        })
+}
+
+export default { reveal, skrollr }

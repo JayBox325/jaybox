@@ -1,13 +1,11 @@
-import multipleJs from 'multiple.js'
-
 const $body = $('body'),
-$hamburger = $('.menu__hamburger'),
-$mask = $('.menu__mask'),
-$checkbox = $('.menu__checkbox'),
-$menuLink = $('.menu__link'),
-$menuList = $('.menu__list'),
-activeMenuClass = 'menu-is-active',
-activeClass = 'is-active'
+    $hamburger = $('.menu__hamburger'),
+    $mask = $('.menu__mask'),
+    $checkbox = $('.menu__checkbox'),
+    $menuLink = $('.menu__link'),
+    $menuList = $('.menu__list'),
+    activeMenuClass = 'menu-is-active',
+    activeClass = 'is-active'
 
 // Hamburger click event
 $hamburger.click(function() {
@@ -36,59 +34,17 @@ $mask.click(function() {
     }
 })
 
-$menuLink.hover(function() {
-    let data = $(this).data('title')
-    $menuList.attr('data-title', data)
-    $menuList.toggleClass('is-hovered')
-})
-
-
 
 // Sticky header
-// function sticky() {
+const $header = $('.header'),
+    $window = $(window),
+    stickyClass = 'is-sticky',
+    top = $header.offset().top + 1
 
-//     const $header = $('.header')
-//     const $window = $(window)
-//     const stickyClass = 'is-sticky'
-//     const top = $header.offset().top + 1
-
-//     $window.scroll(function() {
-//         if ($window.scrollTop() >= top) {
-//             $header.addClass(stickyClass)
-//         } else {
-//             $header.removeClass(stickyClass)
-//         }
-//     })
-
-
-//     // Adding active states on scroll
-//     const sections = $('.js-content-section')
-//     const nav = $('nav')
-//     const nav_height = nav.outerHeight()
-
-//     $(window).on('scroll', function () {
-
-//         // current position
-//         const cur_pos = $(this).scrollTop()
-
-//         // iterate over each of the sections
-//         sections.each(function() {
-//             const top = $(this).offset().top - nav_height
-//             const bottom = top + $(this).outerHeight()
-
-//             if (cur_pos >= top && cur_pos <= bottom) {
-//                 nav.find('a').removeClass('is-active')
-//                 sections.removeClass('is-active')
-
-//                 $(this).addClass('is-active')
-//                 nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('is-active')
-//             } else {
-//                 $(this).removeClass('is-active')
-//                 nav.find('a[href="#'+$(this).attr('id')+'"]').removeClass('is-active')
-//             }
-//         })
-//     })
-
-// }
-
-// export default { sticky }
+$window.scroll(function() {
+    if ($window.scrollTop() >= top) {
+        $header.addClass(stickyClass)
+    } else {
+        $header.removeClass(stickyClass)
+    }
+})

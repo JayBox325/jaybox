@@ -1,31 +1,51 @@
 function scroll() {
-  const $anchor = $('.js-smooth-scroll')
-  const nav = $('.header')
-  const nav_height = nav.outerHeight()
+    const $anchor = $('a')
+    const offset = 60
+    const currUrl = window.location.pathname
 
-  $anchor.on('click', function(event) {
-    const href = $(this).attr('href')
-
-    if (this.hash !== "") {
-      if (!href.charAt(0) == '#') {
-        event.preventDefault()
-      }
-
-      const hash = this.hash
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top - nav_height
-      }, 800, function(){
-        window.location.hash = hash;
-      })
+    // Animate down to section on page load if URL has it on the end
+    if (window.location.hash) {
+        setTimeout(function() {
+            $('html, body').scrollTop(0)
+            $('html, body').animate({
+                scrollTop: $(window.location.hash).offset().top - offset
+                }, 2000)
+        }, 0)
     }
-  })
 
-  // $(window).on("load", function () {
-  //   var urlHash = window.location.href.split("#")[1]
-  //   $('html,body').animate({
-  //       scrollTop: $('#' + urlHash).offset().top
-  //   }, 4000)
-  // })
+
+    // On click of anchor button
+    $anchor.on('click', function(e) {
+        const href = $(this).attr('href')
+        const hash = this.hash
+
+        // If link has a hash in it
+        if (hash) {
+            // If there is a URL before the hash, go to this page then scroll to hash
+            if (href.charAt(0) !== '#') {
+                
+                // If the URL matches the current page
+                if (currUrl == href.split('#')[0]) {
+                    e.preventDefault()
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - offset
+                    }, 2000)
+
+                    console.log('url is current page')
+                } else {
+                    console.log('on the page!')
+                }
+
+            // If the anchor is within the same page as the button
+            } else {
+                e.preventDefault()
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top - offset
+                }, 2000)
+            }
+        }
+    })
+
 }
 
 export default { scroll }

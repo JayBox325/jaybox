@@ -1,7 +1,5 @@
 import Barba from 'barba.js'
-import smoothScroll from './smoothScrolling.js'
-import socialWindow from './social.js'
-import skrollr from './parallax.js'
+import { skrollr, reveal } from './parallax.js'
 
 var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
@@ -39,10 +37,16 @@ var FadeTransition = Barba.BaseTransition.extend({
   }
 })
 
-Barba.Dispatcher.on('transitionCompleted', function(container) {
-  socialWindow.social()
-  smoothScroll.scroll()
-  skrollr.parallax()
+Barba.Dispatcher.on('newPageReady', function(container) {
+    // Get new target path
+    // const getTarget = Barba.HistoryManager.history[Barba.HistoryManager.history.length-1],
+    //     getNewUrl = getTarget.url,
+    //     getPath = getNewUrl.split(".com"),
+    //     newPath = getPath[getPath.length - 1]
+
+    // smoothScroll.scroll(newPath)
+    skrollr.skrollr()
+    reveal.reveal()
 })
 
 Barba.Pjax.getTransition = function() {

@@ -51,6 +51,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
     "gulp-watch": "^4.3.11",
+    "in-view": "^0.6.1",
     "lost": "^8.2.0",
     "multiple.js": "0.0.1",
     "path": "^0.12.7",
