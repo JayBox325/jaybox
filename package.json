@@ -13,9 +13,9 @@
   "scripts": {
     "start": "gulp --env development",
     "cms": "gulp cms --env cms",
-    "build-dev": "gulp build --env development",
-    "build-prod": "gulp build --env production",
-    "build-cms": "gulp build-cms --env production"
+    "build": "gulp build --env development",
+    "build-static": "gulp build --env production",
+    "build-cms": "gulp build-cms --env cms"
   },
   "license": "MIT",
   "dependencies": {
@@ -30,7 +30,6 @@
     "barba.js": "^1.0.0",
     "browser-sync": "^2.18.13",
     "browserify": "^14.4.0",
-    "gsap": "^1.20.3",
     "gulp-babel": "^6.1.2",
     "gulp-changed": "^3.1.0",
     "gulp-cssnano": "^2.1.2",
@@ -45,7 +44,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
-    "gulp-svg-sprite": "^1.3.7",
     "gulp-svg-symbols": "^2.0.2",
     "gulp-svgmin": "^1.2.4",
     "gulp-uglify": "^3.0.0",
@@ -53,15 +51,12 @@
     "gulp-watch": "^4.3.11",
     "in-view": "^0.6.1",
     "lost": "^8.2.0",
-    "multiple.js": "0.0.1",
     "path": "^0.12.7",
     "require-dir": "^0.3.2",
     "require-new": "^1.1.1",
-    "scrollmagic": "^2.0.5",
     "skrollr": "^0.6.26",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
-    "webfontloader": "^1.6.28",
-    "webpack": "^3.4.1"
+    "webfontloader": "^1.6.28"
   }
 }

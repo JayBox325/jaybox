@@ -7,7 +7,14 @@
     }
 }
 
-// @include gradient($black, transparent);
-@mixin gradient($startCol, $endCol) {
-    background: linear-gradient(45deg, $startCol 0%, $endCol 100%);
+// @include gradient(45deg, $black, transparent);
+@mixin gradient($angle, $startCol, $endCol) {
+    background: linear-gradient($angle, $startCol 0%, $endCol 100%);
+}
+
+// @include headerFont();
+@mixin headerFont() {
+    font-family: $headerFont;
+    text-transform: uppercase;
+    font-weight: bold;
 }

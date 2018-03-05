@@ -12,6 +12,7 @@ body {
 	color: $black;
 	font-family: 'Times New Roman', 'Times New Roman', Times, serif;
 	min-height: 100vh;
+	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
@@ -41,7 +42,7 @@ body {
 	width: 100%;
 	max-width: $maxWidth;
 	margin: auto;
-	padding: 0 20px;
+	padding: 0 $sitePaddingMob;
 }
 
 .wrapper--content {
@@ -70,7 +71,7 @@ body {
 
 @include mq($from: $bp-tablet) {
 	.site {
-		font-size: 17px;
+		font-size: 18px;
 	}
 	.wrapper {
 		padding: 0 60px;

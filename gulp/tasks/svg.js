@@ -7,7 +7,6 @@ import {development, production, cms} from '../config'
 import paths from '../path.config'
 
 // SVG Symbols dependencies
-// import svgSprite from 'gulp-svg-sprite'
 import svgmin from 'gulp-svgmin'
 import gulpif from 'gulp-if'
 import path from 'path'

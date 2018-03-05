@@ -3,6 +3,17 @@
 	top: 0;
 	left: 0;
 	background: $white;
-	border-bottom: 1px solid $greyLight;
 	width: 100%;
+	z-index: 20;
+	height: 80px;
+	transition: transform .4s ease-in-out;
+	transform: translate3d(0,0,0);
+	box-shadow: 0 0 8px 0 rgba(0,0,0,0.25);
+}
+
+.header-logo {
+	position: absolute;
+	top: 50%;
+	left: $sitePaddingMob;
+	transform: translate3d(0,-50%,0);
 }

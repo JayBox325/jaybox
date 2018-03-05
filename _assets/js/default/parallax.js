@@ -1,7 +1,7 @@
 import skrollr from 'skrollr'
 import inView from 'in-view'
 
-function skrollr() {
+function scroller() {
     // Setup Skrollr
     function skrollrInit() {
         const s = skrollr.init({
@@ -47,4 +47,4 @@ function reveal() {
         })
 }
 
-export default { reveal, skrollr }
+export default { reveal, scroller }

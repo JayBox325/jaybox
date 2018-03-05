@@ -13,7 +13,7 @@
     "twig": {
         "src": "build/craft/templates/**/*.twig",
         "dest": "build/craft/templates/",
-        "watch": "build/*.twig"
+        "watch": "build/**/*.twig"
     },
     "images": {
         "src": "_assets/images/base/*.*",
