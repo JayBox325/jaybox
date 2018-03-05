@@ -20,10 +20,14 @@ import paths from '../path.config'
 gulp.task('js', function () {
     return browserify(paths.js.src, {debug: true, extensions: ['es6']})
         .transform("babelify", {presets: ["es2015"]})
-        .on('error', util.log)
         .bundle()
+        .on('error', function (err) {
+            var displayErr = util.colors.red(err);
+            util.log(displayErr);
+            util.beep();
+            this.emit('end');
+        })
         .pipe(source('bundle.js'))
-        .on('error', util.log)
 		.pipe(buffer())
         .pipe(development(sourcemaps.init({loadMaps: true})))
         .pipe(development(sourcemaps.write()))
