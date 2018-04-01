@@ -12,34 +12,27 @@
     background: linear-gradient($angle, $startCol 0%, $endCol 100%);
 }
 
-// @include headerFont();
-@mixin headerFont() {
-    font-family: $headerFont;
-    text-transform: uppercase;
-    font-weight: bold;
+
+
+// @include @include pseudo;
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
 }
 
-// @include fluid-type(font-size, $minScreen, $maxScreen, $minFont, $maxFont);
-@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
-	& {
-		@each $property in $properties {
-			#{$property}: $min-value;
-		}
-
-		@media screen and (min-width: $min-vw) {
-			@each $property in $properties {
-				#{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-			}
-		}
-
-		@media screen and (min-width: $max-vw) {
-			@each $property in $properties {
-				#{$property}: $max-value;
-			}
-		}
-	}
+// @include input-placeholder {
+//    color: $grey;
+//}
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
 }
 
-@function strip-unit($value) {
-	@return $value / ($value * 0 + 1);
-}
+
+
+
+@import '_helpers/typography';
