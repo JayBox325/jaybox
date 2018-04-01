@@ -1,8 +1,11 @@
 html {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-    line-height: 1.3;
+    color: $black;
     font-family: $montserrat;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+    @include fluid-type(font-size, $minScreen, $maxScreen, $minFont, $maxFont);
 }
 
 a:active,
@@ -10,7 +13,7 @@ a:hover {
 	outline-width: 0;
 }
 
-i {
+i,em {
     font-style: italic;
 }
 
@@ -21,38 +24,19 @@ strong {
 
 
 // Headings
+h1,
+h2,
+h3,
+h4,
+h5{
+	font-weight: 700;
+	margin-bottom: $baseline;
+}
+
 .heading-1,
 h1 {
     font-size: 30px;
     line-height: 1.3;
-}
-
-.heading-2,
-h2 {
-    font-size: 26px;
-    line-height:1.3;
-}
-
-.heading-3,
-h3 {
-    font-size: 22px;
-    line-height: 1.3;
-}
-
-.heading-4,
-h4 {
-    font-size: 70px;
-    line-height: .6;
-}
-
-.heading-5,
-h5 {
-    font-size: 160%;
-}
-
-.heading-6,
-h6 {
-    font-size: 120%;
 }
 
 
@@ -61,7 +45,9 @@ h6 {
 
 // Base
 p {
-    margin-bottom: 20px;
+	line-height: $baseline;
+    margin-bottom: $baseline;
+    
     &:last-child {
         margin-bottom: 0;
     }
@@ -79,47 +65,14 @@ a {
     transition: color .3s ease-in-out;
 }
 
-@include mq($from: $bp-sm-tablet) {
-    .heading-1,
-    h1 {
-        font-size: 35px;
-    }
-    .heading-2,
-    h2 {
-        font-size: 32px;
-    }
-    .heading-3,
-    h3 {
-        font-size: 28px;
-    }
-}
+$headings-list: h1 h2 h3 h4 h5;
+$variables-list: $h1 $h2 $h3 $h4 $h5;
 
-@include mq($from: $bp-tablet) {
-    .heading-1,
-    h1 {
-        font-size: 40px;
-    }
-    .heading-2,
-    h2 {
-        font-size: 36px;
-    }
-    .heading-3,
-    h3 {
-        font-size: 30px;
-    }
-}
-
-@include mq($from: $bp-desktop) {
-    .heading-1,
-    h1 {
-        font-size: 60px;
-    }
-    .heading-2,
-    h2 {
-        font-size: 44px;
-    }
-    .heading-3,
-    h3 {
-        font-size: 32px;
+@each $current-heading in $headings-list {
+    $i: index($headings-list, $current-heading);
+    #{$current-heading} {
+        font-size: nth($variables-list, $i);
+        line-height: calc(#{nth($variables-list, $i)} * 1.25);
+        margin-top: calc((#{$baseline} - #{nth($variables-list, $i)}) + (#{$baseline} * 2));
     }
 }

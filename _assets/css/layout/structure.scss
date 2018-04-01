@@ -9,12 +9,7 @@
 
 body {
 	background: $black;
-	color: $black;
-	font-family: 'Times New Roman', 'Times New Roman', Times, serif;
 	min-height: 100vh;
-	font-size: 16px;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 
 	&.menu-is-active {
 		overflow: hidden;
@@ -22,8 +17,6 @@ body {
 }
 
 .site {
-	font-size: 16px;
-	line-height: 1.6;
 	background: $greyLight;
 	min-height: 100vh;
 	overflow: hidden;
@@ -70,9 +63,6 @@ body {
 }
 
 @include mq($from: $bp-tablet) {
-	.site {
-		font-size: 18px;
-	}
 	.wrapper {
 		padding: 0 60px;
 	}
@@ -88,9 +78,6 @@ body {
 }
 
 @include mq($from: $bp-wide) {
-	.site {
-		font-size: 18px;
-	}
 }
 
 @include mq($from: $bp-widest) {

@@ -37,7 +37,15 @@ $bp-super-wide:				1400px;
 $bp-widest:                 1600px;
 
 // Fluid typography
-$min-width: 320px;
-$max-width: 1200px;
-// $min_font: 16px;
-// $max_font: 24px;
+$baseline: 1.5rem;
+
+$minScreen: 20rem;
+$maxScreen: 50rem;
+$minFont: .8rem;
+$maxFont: 1.4rem;
+
+$h1: 2.4rem;
+$h2: 2rem;
+$h3: 1.8rem;
+$h4: 1.2rem;
+$h5: 1rem;
