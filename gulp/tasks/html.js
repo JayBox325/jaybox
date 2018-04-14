@@ -1,6 +1,7 @@
 import gulp from 'gulp'
 import browserSync from 'browser-sync'
 import environments from 'gulp-environments'
+import util from 'gulp-util'
 
 // HTML/Nunjucks dependencies
 import data from 'gulp-data'
@@ -18,6 +19,12 @@ gulp.task('nunjucks', function() {
 			path: '_assets/html',
 			ext: '.html'
 		}))
+		.on('error', function(err) {
+			var displayErr = util.colors.red(err)
+			util.log(displayErr)
+            util.beep()
+            this.emit('end')
+		})
 		.pipe(production(htmlmin({collapseWhitespace: true})))
 		.pipe(development(gulp.dest(paths.njks.dest)))
 		.pipe(cms(gulp.dest(paths.njks.cmsDest)))
