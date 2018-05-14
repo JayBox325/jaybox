@@ -27,6 +27,7 @@ gulp.task('nunjucks', function() {
 		})
 		.pipe(production(htmlmin({collapseWhitespace: true})))
 		.pipe(development(gulp.dest(paths.njks.dest)))
+		.pipe(production(gulp.dest(paths.njks.dest)))
 		.pipe(cms(gulp.dest(paths.njks.cmsDest)))
 })
 
