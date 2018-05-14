@@ -36,7 +36,7 @@
         "src": "_assets/images/svgs/*.svg",
         "dest": "_assets/html/_layout",
         "cmsDest": "build/craft/templates/includes",
-        "scssOutput": "_assets/css/sass/_config",
+        "scssOutput": "_assets/css/_config",
         "watch": "_assets/images/svgs/*.svg"
     },
     "fonts": {
