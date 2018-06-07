@@ -7,10 +7,16 @@ $greyMed:                   darken(#ECECEC,10%);
 $orangeLight:               #F76342;
 $orangeDark:                #C4482C;
 
-$facebookLight:             #3b5998;
-$facebookDark:              darken($facebookLight, 5%);
-$twitterLight:              #1da1f2;
-$twitterDark:               darken($twitterLight, 5%);
+$facebook:		            #3b5998;
+$facebookAlt:               darken($facebookLight, 5%);
+$twitter:		            #1da1f2;
+$twitterAlt:                darken($twitterLight, 5%);
+$instagram:		            #5851db;
+$instagramAlt:              darken($instagram, 5%);
+$linkedin:		            #0077b5;
+$linkedinAlt:               darken($instagram, 5%);
+$pinterest:		            #bd081c;
+$pinterestAlt:              darken($pinterest, 5%);
 
 // Fonts
 $montserrat:                'Montserrat', 'Futura', 'Helvetica', sans-serif;
