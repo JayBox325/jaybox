@@ -6,7 +6,11 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-package-lock.json
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 
 # Assets #
@@ -14,15 +18,14 @@ package-lock.json
 node_modules
 *.map
 reports
+build/web/resources
 
-build
-
-# Craft #
-# http://buildwithcraft.com/help/craft-storage-gitignore#craft-storage-runtime
-build/craft/storage/backups/
-build/craft/storage/runtime/
-build/craft/storage/userphotos/
-build/public/resources/
+# CRAFT 3
+/build/vendor/*
+/storage/*
+!/storage/.gitkeep
+.env
+.env.php
 
 # Caches *
 sized/

@@ -12,6 +12,15 @@ import nunjucksRender from 'gulp-nunjucks-render'
 import {development, production, cms} from '../config'
 import paths from '../path.config'
 
+// Versioning config
+const versionConfig = {
+  'value': '%MDS%',
+  'append': {
+    'key': 'v',
+    'to': ['css', 'js'],
+  },
+}
+
 // Process Nunjucks files and output
 gulp.task('nunjucks', function() {
 	return gulp.src(paths.njks.src)
@@ -25,6 +34,7 @@ gulp.task('nunjucks', function() {
             util.beep()
             this.emit('end')
 		})
+		.pipe(versionNumber(versionConfig))
 		.pipe(production(htmlmin({collapseWhitespace: true})))
 		.pipe(development(gulp.dest(paths.njks.dest)))
 		.pipe(production(gulp.dest(paths.njks.dest)))
@@ -40,6 +50,7 @@ gulp.task('nunjucks-watch', ['nunjucks'], function (done) {
 // Process Twig files
 gulp.task('twig', function() {
 	return gulp.src(paths.twig.src)
+		.pipe(versionNumber(versionConfig))
 		.pipe(production(htmlmin({collapseWhitespace: true})))
 
 		// Save twig file out in same location
