@@ -22,6 +22,7 @@
     "gulp": "^3.9.1"
   },
   "devDependencies": {
+    "accordion": "^3.0.1",
     "ajv": "^6.5.2",
     "autoprefixer": "^7.2.6",
     "babel-core": "^6.26.3",

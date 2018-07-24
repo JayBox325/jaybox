@@ -1,9 +1,12 @@
 // Config
 @import '_config/reset';
-@import '_config/sass-mq';
 @import '_config/svg-symbols';
 @import '_config/fonts';
 @import '_config/variables';
+
+// Packages
+@import '_packages/sass-mq';
+@import '_packages/accordion';
 
 // Helpers
 @import '_helpers/helpers';

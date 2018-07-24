@@ -7,6 +7,9 @@ const $body = $('body'),
     activeMenuClass = 'menu-is-active',
     activeClass = 'is-active'
 
+// Find polyfill
+const find = require("jspolyfill-array.prototype.find")
+
 // Hamburger click event
 $hamburger.click(function() {
     if ($body.hasClass(activeMenuClass)) {
