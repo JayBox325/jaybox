@@ -1,5 +1,4 @@
 import Barba from 'barba.js'
-import { scroller, reveal } from './parallax.js'
 
 var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
@@ -38,15 +37,7 @@ var FadeTransition = Barba.BaseTransition.extend({
 })
 
 Barba.Dispatcher.on('newPageReady', function(container) {
-    // Get new target path
-    // const getTarget = Barba.HistoryManager.history[Barba.HistoryManager.history.length-1],
-    //     getNewUrl = getTarget.url,
-    //     getPath = getNewUrl.split(".com"),
-    //     newPath = getPath[getPath.length - 1]
-
-    // smoothScroll.scroll(newPath)
-    scroller.skrollr()
-    reveal.reveal()
+  // Re-initialise JS here.
 })
 
 Barba.Pjax.getTransition = function() {
