@@ -1,4 +1,4 @@
-if ($('form').length > 0) {
+if ($('.js-moving-labels').length > 0) {
     const $input = $('.form__input')
 
     function checkForInput(element) {
@@ -10,6 +10,7 @@ if ($('form').length > 0) {
             $label.removeClass('has-value')
         }
     }
+    
     // The lines below are executed on page load
     $input.each(function() {
         checkForInput(this)

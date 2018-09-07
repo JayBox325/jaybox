@@ -1,10 +1,20 @@
 window.require = require
 
+// Basic menu JS
 import menu from './default/menu'
-import form from './default/form'
+
+// Change form inputs on populating field
+import formLabels from './default/moving-form-labels'
+
+// Load webfonts
 import webfontLoader from './default/webfont-loader'
-import parallax from './default/parallax'
+
+// Accordion
+import accordion from './default/accordion'
+
+// Open share links in mini windows
+import social from './default/social'
 
 
-// Barba.JS
+// Optional Barba.JS stuff
 //import pageTransitions from './default/pageTransitions'

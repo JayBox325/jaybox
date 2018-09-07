@@ -4,7 +4,7 @@ import requireDir from 'require-dir'
 // Tasks
 requireDir('./gulp/tasks', {recurse: true})
 
-gulp.task('default', [
+gulp.task('default', gulp.parallel(
 	'styles',
 	'move-scripts',
 	'move-favicons',
@@ -15,9 +15,9 @@ gulp.task('default', [
 	'js',
 	'serve',
 	'watch'
-]);
+))
 
-gulp.task('cms', [
+gulp.task('cms', gulp.parallel(
 	'styles',
 	'move-scripts',
 	'move-fonts',
@@ -29,9 +29,9 @@ gulp.task('cms', [
 	'js',
 	'serve',
 	'watch-cms'
-]);
+))
 
-gulp.task('build', [
+gulp.task('build', gulp.parallel(
 	'styles',
 	'symbols',
 	'move-scripts',
@@ -40,9 +40,9 @@ gulp.task('build', [
 	'images',
 	'nunjucks',
 	'js'
-]);
+))
 
-gulp.task('build-cms', [
+gulp.task('build-cms', gulp.parallel(
 	'styles',
 	'move-scripts',
 	'move-favicons',
@@ -51,4 +51,4 @@ gulp.task('build-cms', [
 	'symbols',
 	'twig',
 	'js'
-]);
+))
