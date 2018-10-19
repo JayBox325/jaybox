@@ -13,8 +13,8 @@ import svgSymbols from 'gulp-svg-symbols'
 import rename from 'gulp-rename'
 
 // Symbols task
-gulp.task('symbols', function () {
-    gulp.src(paths.svgs.src)
+gulp.task('symbols', () => {
+    return gulp.src(paths.svgs.src)
         .pipe(svgmin())
         .pipe(svgSymbols({
             className: '.icon--%f',
@@ -48,5 +48,5 @@ gulp.task('symbols', function () {
         .pipe(production(gulpif( /[.]njk$/, gulp.dest(paths.svgs.dest))))
         .pipe(cms(gulpif( /[.]twig$/, gulp.dest(paths.svgs.cmsDest))))
         .pipe(gulpif( /[.]scss$/, gulp.dest(paths.svgs.scssOutput)))
-        .pipe(browserSync.reload({ stream: true }))
+        .pipe(development(browserSync.reload({ stream: true })))
 })
