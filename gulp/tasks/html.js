@@ -1,6 +1,8 @@
 import gulp from 'gulp'
 import browserSync from 'browser-sync'
 import util from 'gulp-util'
+import data from 'gulp-data'
+import fs from 'fs'
 
 // HTML/Nunjucks dependencies
 import versionNumber from 'gulp-version-number'
@@ -23,6 +25,12 @@ const versionConfig = {
 // Process Nunjucks files and output
 gulp.task('nunjucks', function() {
     return gulp.src(paths.njks.src)
+        .pipe(data(function() {
+            // return require('./_assets/html/data.json')
+            // // return JSON.parse(fs.readFileSync('./_assets/html' + path.basename(file.path, '.nunjucks') + '.json'));
+            // return JSON.parse(fs.readFileSync('./_assets/html/data.json'))
+            return JSON.parse(fs.readFileSync('./_assets/html/data.json'));
+        }))
         .pipe(nunjucksRender({
             path: '_assets/html',
             ext: '.html'
